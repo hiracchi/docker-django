@@ -1,4 +1,4 @@
-PACKAGE="hiracchi/django"
+PACKAGE="ghcr.io/hiracchi/docker-django"
 TAG=latest
 CONTAINER_NAME="django"
 ARG=
