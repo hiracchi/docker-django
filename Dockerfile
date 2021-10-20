@@ -8,18 +8,22 @@ RUN set -x && \
   apt-get update && \
   apt-get install -y \
   make \
+  mongodb \
+  \
   python3 python3-pip \
-  mongodb && \
+  \
+  python3-msgpack \
+  python3-yaml \
+  python3-pymongo \
+  \
+  python3-django \
+  python3-django-environ \
+  python3-django-debug-toolbar \
+  python3-django-filters \
+  python3-djangorestframework \
+  && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
-
-RUN set -x && \
-  pip3 install django && \
-  pip3 install django-environ && \
-  pip3 install django-debug-toolbar && \
-  pip3 install djangorestframework && \
-  pip3 install django-filter && \
-  pip3 install pymongo
 
 # -----------------------------------------------------------------------------
 # entrypoint
